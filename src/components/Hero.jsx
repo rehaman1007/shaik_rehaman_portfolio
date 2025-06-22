@@ -1,8 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Box, Typography, Avatar, Button, useTheme } from "@mui/material";
 import * as THREE from "three";
-import { themeVantaMap } from "../theme"; // path based on your setup
+import { themeVantaMap } from "../theme";
 import profile from "../assets/profile.jpeg";
+import resumePDF from '../assets/resume.pdf';
+
 
 export default function Hero({ themeName }) {
   console.log("themename", themeName);
@@ -134,7 +136,7 @@ export default function Hero({ themeName }) {
                 color: theme.palette.primary.main,
               }}
               component="a"
-              href="/resume.pdf"
+              href={resumePDF}
               download="SHAIK_REHAMAN_RESUME.pdf"
             >
               My Resume

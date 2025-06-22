@@ -34,10 +34,10 @@ const detailsVariants = {
 const projects = [
   {
     name: 'Audit Reporting System',
-    desc: 'React.js + Express.js + CRUD + Auth',
+    desc: 'React.js + Express.js + Microservices',
     details:
       'Developed a full-featured audit reporting system with secure authentication, CRUD operations, and responsive dashboards to monitor and generate audit data efficiently.',
-    tech: ['React.js', 'Express.js', 'MongoDB', 'JWT'],
+    tech: ['React.js', 'Express.js', 'Microservices', 'Java', 'JWT'],
   },
   {
     name: 'Balance Sheet',

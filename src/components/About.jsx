@@ -3,25 +3,15 @@ import {
   Box,
   Typography,
   Stack,
-  Divider,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import CodeIcon from "@mui/icons-material/Code";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import CloudIcon from "@mui/icons-material/Cloud";
-
-const services = [
-  { icon: <CodeIcon fontSize="large" />, label: "Website Development" },
-  { icon: <PhoneIphoneIcon fontSize="large" />, label: "App Development" },
-  { icon: <CloudIcon fontSize="large" />, label: "Website Hosting" },
-];
 
 const stats = [
-  { value: "10+", label: "Years of experience" },
-  { value: "95%", label: "Client satisfaction" },
-  { value: "120+", label: "Completed Projects" },
+  { value: "2+", label: "Years of experience" },
+  { value: "99%", label: "Client satisfaction" },
+  { value: "10+", label: "Projects" },
 ];
 
 export default function About() {
@@ -40,55 +30,11 @@ export default function About() {
         color: "text.primary",
         minHeight: "100vh",
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
+        flexDirection: "column",
         gap: 6,
         alignItems: "start",
       }}
     >
-      {/* Left Timeline with Icons */}
-      <Stack
-        sx={{
-          position: "relative",
-          flex: 1,
-          pl: 4,
-        }}
-        spacing={6}
-      >
-        {/* Vertical line */}
-        <Box
-          sx={{
-            position: "absolute",
-            top: 8,
-            bottom: 8,
-            left: 18,
-            width: "2px",
-            backgroundColor: "primary.main",
-          }}
-        />
-
-        {/* Timeline Items */}
-        {services.map((item, index) => (
-          <Stack direction="row" spacing={2} alignItems="center" key={index}>
-            <Box
-              sx={{
-                zIndex: 1,
-                backgroundColor: "background.default",
-                p: 0.5,
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "primary.main",
-              }}
-            >
-              {item.icon}
-            </Box>
-            <Typography variant="h6">{item.label}</Typography>
-          </Stack>
-        ))}
-      </Stack>
-
-      {/* Right Text Content */}
       <Box
         component={motion.div}
         initial={{ opacity: 0, y: 50 }}
@@ -102,17 +48,17 @@ export default function About() {
         </Typography>
 
         <Typography paragraph>
-          I'm a passionate problem solver with a background in design
-          engineering, driven by a deep interest in technology and innovation.
-          My journey into software development was fueled by a curiosity for how
-          things work and a desire to create meaningful digital experiences.
+          I'm a passionate problem solver with a background in design engineering,
+          driven by a deep interest in technology and innovation. My journey into
+          software development was fueled by a curiosity for how things work and a
+          desire to create meaningful digital experiences.
         </Typography>
 
         <Typography paragraph>
           I find great satisfaction in building intuitive systems, refining user
           interactions, and bringing structure to ideas. I enjoy the process of
-          turning concepts into functional, polished outcomes and thrive in
-          roles that allow me to learn, adapt, and collaborate.
+          turning concepts into functional, polished outcomes and thrive in roles
+          that allow me to learn, adapt, and collaborate.
         </Typography>
 
         <Typography paragraph>
@@ -131,7 +77,6 @@ export default function About() {
           <strong>Languages Known:</strong> English, Hindi, Telugu
         </Typography>
 
-        {/* Stats Section */}
         <Stack
           direction={{ xs: "column", sm: "row" }}
           spacing={4}
