@@ -2,18 +2,27 @@ import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import react from "../assets/react.svg";
+import angularjs from "../assets/angularjs.svg";
+import java from "../assets/java.svg";         // You had angularjs.svg twice; changed to java.svg
+import javascript from "../assets/javascript.svg";
+import mysql from "../assets/mysql.svg";
+import nodejs from "../assets/nodejs.svg";
+import oracle from "../assets/oracle.svg";
+import spring from "../assets/spring.svg";
 
-// Updated skills data with SVG paths and color
+// Updated skills data using imported SVGs as icons
 const skillsData = [
-  { name: "JavaScript", desc: "ES6+, modern JS", icon: "/javascript.svg", color: "#F7DF1E" },
-  { name: "React.js", desc: "Hooks, context API", icon: "/react.svg", color: "#61DAFB" },
-  { name: "Angular", desc: "Component-driven UI", icon: "/angularjs.svg", color: "#DD0031" },
-  { name: "Java", desc: "OOP, Spring Boot", icon: "/java.svg", color: "#f89820" },
-  { name: "Node.js", desc: "Express, REST APIs", icon: "/nodejs.svg", color: "#68A063" },
-  { name: "Spring Boot", desc: "Microservices & APIs", icon: "/spring.svg", color: "#6DB33F" },
-  { name: "SQL", desc: "Queries & Design", icon: "/mysql.svg", color: "#4479A1" },
-  { name: "Oracle SQL", desc: "Stored Procedures", icon: "/oracle.svg", color: "#F80000" },
+  { name: "JavaScript", desc: "ES6+, modern JS", icon: javascript, color: "#F7DF1E" },
+  { name: "React.js", desc: "Hooks, context API", icon: react, color: "#61DAFB" },
+  { name: "Angular", desc: "Component-driven UI", icon: angularjs, color: "#DD0031" },
+  { name: "Java", desc: "OOP, Spring Boot", icon: java, color: "#f89820" },
+  { name: "Node.js", desc: "Express, REST APIs", icon: nodejs, color: "#68A063" },
+  { name: "Spring Boot", desc: "Microservices & APIs", icon: spring, color: "#6DB33F" },
+  { name: "SQL", desc: "Queries & Design", icon: mysql, color: "#4479A1" },
+  { name: "Oracle SQL", desc: "Stored Procedures", icon: oracle, color: "#F80000" },
 ];
+
 
 // Circular progress ring SVG component
 function CircularRing({ size = 100, strokeWidth = 8, color }) {

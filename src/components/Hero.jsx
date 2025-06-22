@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Box, Typography, Avatar, Button, useTheme } from "@mui/material";
 import * as THREE from "three";
 import { themeVantaMap } from "../theme"; // path based on your setup
+import profile from "../assets/profile.jpeg";
 
 export default function Hero({ themeName }) {
   console.log("themename", themeName);
@@ -158,7 +159,7 @@ export default function Hero({ themeName }) {
             }}
           />
           <Avatar
-            src="/profile.jpeg"
+            src={profile}
             alt="Profile"
             sx={{
               width: 280,
